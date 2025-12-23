@@ -1,190 +1,144 @@
-<<<<<<< HEAD
-# DocAppoint
-=======
-🩺 PRECRIPTO
+# 🩺 DocAppoint
 
-Precripto is a full‑stack healthcare appointment and prescription management platform built using the MERN stack. It enables patients to book doctor appointments, doctors to manage schedules and prescriptions, and admins to control and monitor the entire system — all from dedicated dashboards.
+**DocAppoint** is a full-stack **Smart Doctor Appointment Platform** built using the **MERN stack**.  
+It enables patients to book doctor appointments, doctors to manage schedules, and an admin to monitor and control the entire system through a secure dashboard.
 
-This project was built as a team effort with a strong focus on real‑world healthcare workflows, scalability, and clean system architecture.
+This project is designed with real-world healthcare workflows, clean architecture, and scalable cloud deployment in mind.
 
 ---
 
-👥 Team
-- Vikas A R
-- Sampreeth C H
-- Saroj Kumar Sah
-- Sanjan R
+## 🌐 Live Applications
+
+### 👤 Patient Frontend
+- https://doc-appoint-pearl.vercel.app/
+- https://doc-appoint-1j4y.vercel.app/
+
+> Multiple deployments are used for testing and production validation.
 
 ---
 
-🚀 Features
+## 👨‍💼 Admin
+The **admin role is managed by the project owner**.
 
-👤 Patient (Frontend)
-- User authentication (signup / login)  
-- Browse doctors by specialization  
-- Book & manage appointments  
-- Online payment integration using Razorpay  
-- View appointment history  
+📩 **Admin Contact**
+- **Name:** Vicky  
+- **GitHub:** https://github.com/VickySource  
+- **LinkedIn:** https://www.linkedin.com/in/vikas-ar/
 
-👨‍⚕️ Doctor Dashboard
-- Doctor authentication  
-- View scheduled appointments  
-- Mark appointments as completed or cancelled  
-- Manage availability  
-
-🛠️ Admin Dashboard
-- Admin authentication  
-- Add and manage doctors  
-- View all users and appointments  
-- Platform‑wide control and monitoring  
+(Admin credentials are intentionally not shared publicly.)
 
 ---
 
-🧱 Tech Stack
+## 👥 Team Members
 
-Frontend & Admin  
-- React (Vite)  
-- React Router  
-- Context API  
-- Axios  
-- Tailwind CSS  
+This project was developed collaboratively by:
 
-Backend  
-- Node.js  
-- Express.js  
-- MongoDB Atlas  
-- Mongoose  
-- JWT Authentication  
+- **Vicky**  
+  LinkedIn: https://www.linkedin.com/in/vikas-ar/
 
-Other Services  
-- Cloudinary – Image uploads  
-- Razorpay – Online payments  
-- Render – Backend deployment  
-- Vercel – Frontend & Admin deployment  
+- **Sampreeth C H**  
+  LinkedIn: https://www.linkedin.com/in/sampreethch/
+
+- **Saroj Kumar Sah**  
+  LinkedIn: https://www.linkedin.com/in/saroj-kumar-sah-9056a1299/
+
+- **Sanjan R**  
+  LinkedIn: https://www.linkedin.com/in/sanjan-r/
 
 ---
 
-🗂️ Project Structure
-`
-PRECRIPTO/
+## 🚀 Features
+
+### 👤 Patient
+- User authentication (Signup / Login)
+- Browse doctors by specialization
+- Book and manage appointments
+- Online payments using Razorpay
+- View appointment history
+
+### 👨‍⚕️ Doctor
+- Doctor authentication
+- View scheduled appointments
+- Update appointment status
+- Manage availability
+
+### 🛠️ Admin
+- Secure admin authentication
+- Add and manage doctors
+- View users and appointments
+- Platform-wide monitoring
+
+---
+
+## 🧱 Tech Stack
+
+### Frontend & Admin
+- React (Vite)
+- React Router
+- Context API
+- Axios
+- Tailwind CSS
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- JWT Authentication
+
+### Third-Party Services
+- Cloudinary – Image storage
+- Razorpay – Online payments
+- Gemini AI – AI features
+- Vercel – Frontend & Admin deployment
+- Render – Backend deployment
+
+---
+
+## 🗂️ Project Structure
+
+DocAppoint/
 │
-├── frontend/     # Patient‑side application
-├── admin/        # Admin dashboard
-├── backend/      # Express server & APIs
+├── frontend/ # Patient application
+├── admin/ # Admin dashboard
+├── backend/ # Express server & APIs
 └── README.md
-`
 
 ---
 
-⚙️ Environment Variables
+## ⚙️ Environment Variables
 
-Backend (backend/.env)  
-`
+### Backend (`backend/.env`)
+```env
 MONGODB_URI=
+JWT_SECRET=
+
 CLOUDINARY_NAME=
-CLOUDINARYAPIKEY=
-CLOUDINARYSECRETKEY=
+CLOUDINARY_API_KEY=
+CLOUDINARY_SECRET_KEY=
+
 ADMIN_EMAIL=
 ADMIN_PASSWORD=
-JWT_SECRET=
-RAZORPAYKEYID=
-RAZORPAYKEYSECRET=
-CURRENCY=INR
-NODE_ENV=production
+
+GEMINI_API_KEY=
+
+RAZORPAY_KEY_ID=
+RAZORPAY_KEY_SECRET=
+
 PORT=4000
-`
+NODE_ENV=production
+VITE_BACKEND_URL=
+VITE_RAZORPAY_KEY_ID=
 
-Frontend (frontend/.env)  
-`
-VITEBACKENDURL=
-VITERAZORPAYKEY_ID=
-`
+Frontend (frontend/.env)
+VITE_BACKEND_URL=
+VITE_RAZORPAY_KEY_ID=
 
-Admin (admin/.env)  
-`
-VITEBACKENDURL=
-`
+Admin (admin/.env)
+VITE_BACKEND_URL=
 
-⚠️ Never commit .env files to GitHub. All secrets are configured in deployment platforms.
-
----
-
-▶️ Running Locally
-
-1. Clone the repository  
-   `bash
-   git clone <repo-url>
-   cd PRECRIPTO
-   `
-2. Start Backend  
-   `bash
-   cd backend
-   npm install
-   npm start
-   `
-3. Start Frontend  
-   `bash
-   cd frontend
-   npm install
-   npm run dev
-   `
-4. Start Admin  
-   `bash
-   cd admin
-   npm install
-   npm run dev
-   `
-
----
-
-🌐 Deployment (Vercel Setup)
-
-When deploying the frontend on Vercel:
-
-- Vercel Team: Vicky's projects  
-- Scope: Hobby  
-- Project Name: precripto  
-- Framework Preset: Vite  
-- Root Directory: frontend  
-- Build Command:  
-  `bash
-  vite build
-  `
-- Output Directory:  
-  `
-  dist
-  `
-- Install Command:  
-  `
-  npm install
-  `
-  (alternatively: yarn install, pnpm install, bun install)  
-
-Environment variables are configured directly in Vercel dashboard.
-
----
-
-🎯 Key Highlights
-- Clean role‑based architecture (Patient / Doctor / Admin)  
-- Secure JWT‑based authentication  
-- Real‑time appointment status handling  
-- Payment workflow integration  
-- Scalable monorepo structure  
-
----
-
-📌 Future Enhancements
-- Email & SMS notifications  
-- Doctor availability calendar  
-- Prescription PDF generation  
-- Analytics dashboard for admin  
-
----
 
 📄 License
 This project is for educational and demonstration purposes.  
 
 Built with ❤️ by Team Vikas A R, Sampreeth C H, Saroj Kumar Sah & Sanjan R
-
----
->>>>>>> 92ebb92 (Initial commit)
