@@ -11,7 +11,6 @@ This project is designed with real-world healthcare workflows, clean architectur
 
 ### 👤 Patient Frontend
 - https://doc-appoint-pearl.vercel.app/
-- https://doc-appoint-admin.vercel.app/
 
 > Multiple deployments are used for testing and production validation.
 
